@@ -1,0 +1,20 @@
+libbpf: loading bpf_corrected_v1.o
+libbpf: elf: section(3) uprobe/test_uprobe_func, size 16, link 0, flags 6, type=1
+libbpf: sec 'uprobe/test_uprobe_func': found program 'BPF_UPROBE' at insn offset 0 (0 bytes), code size 2 insns (16 bytes)
+libbpf: elf: section(12) .BTF, size 219, link 0, flags 0, type=1
+libbpf: elf: section(13) .BTF.ext, size 80, link 0, flags 0, type=1
+libbpf: elf: section(21) .symtab, size 264, link 1, flags 0, type=2
+libbpf: looking for externs among 11 symbols...
+libbpf: collected 0 externs total
+libbpf: prog 'BPF_UPROBE': -- BEGIN PROG LOAD LOG --
+func#0 @0
+R1 is not a scalar
+0: R1=ctx(off=0,imm=0) R10=fp0
+; return 0;
+0: (b7) r0 = 0                        ; R0_w=0
+1: (95) exit
+verification time 284 usec
+stack depth 0
+processed 2 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+-- END PROG LOAD LOG --
+Error: failed to pin program uprobe/test_uprobe_func
